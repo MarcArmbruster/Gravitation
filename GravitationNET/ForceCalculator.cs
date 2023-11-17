@@ -5,7 +5,7 @@
         /// <summary>
         /// Value Unit: m³/(kg s²)
         /// </summary>
-        private static double GravitationConstant = 6.672 * Math.Pow(10, -11);
+        private static readonly double GravitationConstant = 6.672 * Math.Pow(10, -11);
 
         /// <summary>
         /// Force value in N
