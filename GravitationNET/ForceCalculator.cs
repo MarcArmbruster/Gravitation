@@ -1,14 +1,12 @@
-﻿namespace Gravitation
+﻿namespace GravitationNET
 {
-    using System;
-    
     public class ForceCalculator
     {
         /// <summary>
         /// Value Unit: m³/(kg s²)
         /// </summary>
-        private static double GravitationConstant =  6.672 * Math.Pow(10, -11);
-        
+        private static double GravitationConstant = 6.672 * Math.Pow(10, -11);
+
         /// <summary>
         /// Force value in N
         /// </summary>
@@ -22,7 +20,7 @@
             {
                 throw new InvalidOperationException("Distance must be positive");
             }
-            
+
             if (massOne == 0d || massTwo == 0d)
             {
                 throw new InvalidOperationException("Gravitation works only on objects with a mass");
@@ -42,8 +40,8 @@
         /// <param name="innerDistance">The distinct of the second object from center of first object</param>
         /// <returns>The gravitation force.</returns>
         public double InsideGravitationForce(
-            double massOne, 
-            double massTwo, 
+            double massOne,
+            double massTwo,
             double massOneRadius,
             double innerDistance)
         {
@@ -66,7 +64,7 @@
             {
                 return OutsideGravitationForce(massOne, massTwo, innerDistance);
             }
-            
+
             if (massOne == 0d || massTwo == 0d)
             {
                 throw new InvalidOperationException("Gravitation works only on objects with a mass");
